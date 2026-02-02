@@ -1,5 +1,5 @@
 /**
- * Travel Wheelchair - AA Alive Sdn. Bhd.
+ * Transfer Chair - AA Alive Sdn. Bhd.
  * Premium interactions with enhanced animations
  * Purple-Emerald theme with warm neutrals
  */
