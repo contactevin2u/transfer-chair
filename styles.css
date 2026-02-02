@@ -1922,6 +1922,128 @@ h4 { font-size: 1rem; font-weight: 600; }
 .footer-legal a:hover { color: var(--white); }
 
 /* =============================================
+   Product Installment Line
+   ============================================= */
+
+.product-installment {
+    font-size: 13px;
+    color: var(--accent-400);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* =============================================
+   Warranty & After-Sales Grid
+   ============================================= */
+
+.warranty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.warranty-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.warranty-card:hover {
+    border-color: var(--primary-200);
+    box-shadow: var(--shadow-lg);
+}
+
+.warranty-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-100), var(--accent-100));
+    border-radius: var(--radius-lg);
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    transition: all var(--transition);
+}
+
+.warranty-card:hover .warranty-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.warranty-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: var(--gray-900);
+}
+
+.warranty-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* =============================================
+   Institutional / Bulk Buyers
+   ============================================= */
+
+.institutional-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.institutional-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.institutional-card:hover {
+    border-color: var(--primary-200);
+    box-shadow: var(--shadow-lg);
+}
+
+.institutional-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-100), var(--accent-100));
+    border-radius: var(--radius-lg);
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    transition: all var(--transition);
+}
+
+.institutional-card:hover .institutional-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.institutional-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: var(--gray-900);
+}
+
+.institutional-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.institutional-cta {
+    text-align: center;
+    margin-top: 32px;
+}
+
+/* =============================================
    WhatsApp Float - Enhanced
    ============================================= */
 
@@ -2029,6 +2151,8 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero-card { display: none; }
 
     .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .warranty-grid { grid-template-columns: repeat(2, 1fr); }
+    .institutional-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
     .step-card::after { display: none; }
 
@@ -2055,6 +2179,8 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero-trust { flex-direction: column; gap: 16px; }
 
     .benefits-grid { grid-template-columns: 1fr; }
+    .warranty-grid { grid-template-columns: 1fr; }
+    .institutional-grid { grid-template-columns: 1fr; }
     .comparison-grid { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr; }
     .why-grid { grid-template-columns: 1fr; }

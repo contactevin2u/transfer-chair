@@ -1,6 +1,6 @@
 /**
  * Transfer Chair - AA Alive Sdn. Bhd.
- * Premium interactions with enhanced animations
+ * Sales-only website — premium interactions with enhanced animations
  * Purple-Emerald theme with warm neutrals
  */
 
