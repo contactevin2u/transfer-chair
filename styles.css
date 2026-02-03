@@ -1809,8 +1809,13 @@ h4 { font-size: 1rem; font-weight: 600; }
     color: var(--primary);
     border-radius: var(--radius-lg);
     margin-bottom: 20px;
-    font-size: 1.5rem;
     transition: all var(--transition);
+}
+
+.why-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--primary-600);
 }
 
 .why-card:hover .why-icon {
