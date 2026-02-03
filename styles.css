@@ -1061,6 +1061,123 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 /* =============================================
+   Product Guide (Wheelchair vs Hoist)
+   ============================================= */
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.guide-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+}
+
+.guide-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.guide-header h3 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+    margin: 0;
+}
+
+.guide-tag {
+    background: var(--primary-100);
+    color: var(--primary-700);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.guide-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.guide-card h4 {
+    font-size: 14px;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.guide-list li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text);
+    border-bottom: 1px solid var(--gray-50);
+}
+
+.guide-list li:last-child {
+    border-bottom: none;
+}
+
+.guide-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-500);
+    font-weight: 600;
+}
+
+.guide-example {
+    background: var(--gray-50);
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--primary-400);
+}
+
+.guide-example strong {
+    color: var(--gray-700);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.guide-cta {
+    text-align: center;
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--gray-300);
+}
+
+.guide-cta p {
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+@media (max-width: 768px) {
+    .guide-grid { grid-template-columns: 1fr; }
+}
+
+/* =============================================
    Benefits
    ============================================= */
 
