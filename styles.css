@@ -1970,41 +1970,6 @@ h4 { font-size: 1rem; font-weight: 600; }
     margin-top: 32px;
 }
 
-/* Institutional Banner (simplified) */
-.institutional-banner {
-    padding: 32px 0;
-}
-
-.institutional-banner-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    background: linear-gradient(135deg, var(--primary-50), var(--accent-100));
-    padding: 24px 32px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--primary-200);
-}
-
-.institutional-banner-text h3 {
-    font-size: 1.15rem;
-    color: var(--gray-900);
-    margin-bottom: 4px;
-}
-
-.institutional-banner-text p {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .institutional-banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 /* =============================================
    WhatsApp Float - Enhanced
    ============================================= */
