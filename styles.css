@@ -439,41 +439,31 @@ h4 { font-size: 1rem; font-weight: 600; }
     align-items: center;
 }
 
-/* Decorative cream blobs (behind card) */
-.hero-blob {
+/* Background organic blobs */
+.hero-bg-blob {
     position: absolute;
+    border-radius: 50% 40% 60% 45% / 55% 50% 45% 50%;
     pointer-events: none;
     z-index: 0;
 }
 
-.hero-blob-1 {
-    width: 350px;
-    height: 400px;
-    background: linear-gradient(160deg, rgba(240, 225, 205, 0.35) 0%, rgba(225, 205, 180, 0.2) 60%, transparent 100%);
-    border-radius: 50% 50% 70% 30% / 40% 60% 40% 60%;
-    top: 8%;
-    left: 3%;
-    animation: blobFloat 18s ease-in-out infinite;
+.hero-bg-blob-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(45, 31, 78, 0.7);
+    top: -150px;
+    right: -120px;
+    animation: blobFloat 20s ease-in-out infinite;
 }
 
-.hero-blob-2 {
-    width: 280px;
-    height: 260px;
-    background: linear-gradient(180deg, rgba(240, 225, 205, 0.28) 0%, rgba(225, 205, 180, 0.12) 100%);
-    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
-    bottom: 5%;
-    left: 8%;
-    animation: blobFloat 22s ease-in-out infinite 2s;
-}
-
-.hero-blob-3 {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(180deg, rgba(240, 225, 205, 0.22) 0%, rgba(225, 205, 180, 0.1) 100%);
-    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
-    bottom: 15%;
-    right: 5%;
-    animation: blobFloat 20s ease-in-out infinite 4s;
+.hero-bg-blob-2 {
+    width: 450px;
+    height: 450px;
+    background: rgba(40, 28, 70, 0.6);
+    bottom: -180px;
+    left: -150px;
+    border-radius: 45% 55% 50% 40% / 50% 45% 55% 45%;
+    animation: blobFloat 25s ease-in-out infinite reverse;
 }
 
 @keyframes blobFloat {
@@ -486,7 +476,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .hero-card-wrapper {
     position: relative;
     z-index: 1;
-    background: linear-gradient(145deg, rgba(45, 31, 78, 0.97), rgba(35, 24, 60, 0.98));
+    background: linear-gradient(145deg, rgba(45, 31, 78, 0.95), rgba(35, 24, 60, 0.98));
     border-radius: 24px;
     padding: 0;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
@@ -494,6 +484,33 @@ h4 { font-size: 1rem; font-weight: 600; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 520px;
+}
+
+/* Decorative cream blobs inside card */
+.hero-blob {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-blob-1 {
+    width: 320px;
+    height: 380px;
+    background: linear-gradient(160deg, rgba(240, 225, 205, 0.3) 0%, rgba(225, 205, 180, 0.15) 60%, transparent 100%);
+    border-radius: 50% 50% 70% 30% / 40% 60% 40% 60%;
+    top: -60px;
+    left: -80px;
+    animation: blobFloat 18s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+    width: 220px;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(240, 225, 205, 0.2) 0%, rgba(225, 205, 180, 0.08) 100%);
+    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
+    bottom: -50px;
+    left: 15%;
+    animation: blobFloat 22s ease-in-out infinite 2s;
 }
 
 .hero-grid {
@@ -607,15 +624,12 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .trust-text span { color: rgba(255, 255, 255, 0.6); }
 
-/* Hero image with abstract wavy shape */
+/* Hero image with curved mask */
 .hero-visual {
     position: relative;
     z-index: 2;
     animation: fadeIn 0.8s ease-out 0.3s both;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -624,22 +638,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .hero-image-mask {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 480px;
-    clip-path: polygon(
-        25% 0%,
-        100% 0%,
-        100% 100%,
-        25% 100%,
-        0% 85%,
-        8% 70%,
-        0% 55%,
-        10% 40%,
-        0% 25%,
-        8% 10%
-    );
+    position: absolute;
+    inset: 0;
+    border-radius: 120px 24px 24px 120px;
     overflow: hidden;
 }
 
@@ -662,15 +663,8 @@ h4 { font-size: 1rem; font-weight: 600; }
         position: relative;
     }
     .hero-image-mask {
-        min-height: 320px;
-        clip-path: polygon(
-            0% 15%,
-            15% 0%,
-            100% 0%,
-            100% 100%,
-            15% 100%,
-            0% 85%
-        );
+        border-radius: 24px 24px 80px 80px;
+        position: absolute;
     }
     .hero-content {
         text-align: center;
@@ -681,9 +675,8 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero-text { margin-left: auto; margin-right: auto; }
     .hero-cta { justify-content: center; }
     .hero-trust { justify-content: center; }
-    .hero-blob-1 { width: 180px; height: 200px; }
-    .hero-blob-2 { width: 150px; height: 140px; }
-    .hero-blob-3 { display: none; }
+    .hero-blob-1 { width: 200px; height: 240px; top: auto; bottom: -40px; left: -40px; }
+    .hero-blob-2 { display: none; }
 }
 
 @media (max-width: 480px) {
