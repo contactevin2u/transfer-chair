@@ -1074,7 +1074,40 @@ h4 { font-size: 1rem; font-weight: 600; }
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-lg);
-    padding: 28px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.guide-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: var(--gray-100);
+}
+
+.guide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.guide-card .guide-header,
+.guide-card .guide-desc,
+.guide-card h4,
+.guide-card .guide-list,
+.guide-card .guide-example {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.guide-card .guide-header {
+    padding-top: 20px;
+}
+
+.guide-card .guide-example {
+    margin: 0 28px 28px 28px;
+    padding: 14px 16px;
 }
 
 .guide-header {
