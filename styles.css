@@ -562,14 +562,17 @@ h4 { font-size: 1rem; font-weight: 600; }
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .hero-image img {
-    width: 100%;
+    width: 115%;
     height: auto;
-    object-fit: contain;
-    border-radius: var(--radius-xl);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    object-position: left center;
+    margin-right: -15%;
 }
 
 /* Responsive */
