@@ -603,6 +603,40 @@ h4 { font-size: 1rem; font-weight: 600; }
     background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
 }
 
+.section-with-orbs {
+    overflow: hidden;
+}
+
+.section-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.section-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary-300);
+    top: -100px;
+    right: -100px;
+}
+
+.section-orb-2 {
+    width: 350px;
+    height: 350px;
+    background: var(--accent-300);
+    bottom: -100px;
+    left: -100px;
+}
+
+.section-with-orbs .container {
+    position: relative;
+    z-index: 1;
+}
+
 .section-blue {
     background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 40%, var(--accent-600) 100%);
     color: var(--white);
