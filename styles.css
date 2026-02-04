@@ -1160,7 +1160,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .guide-header h3 {
     font-size: 1.5rem;
-    color: #7c3aed;
+    background: linear-gradient(90deg, #7c3aed, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin: 0;
     font-weight: 700;
 }
