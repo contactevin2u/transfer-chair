@@ -507,9 +507,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .hero-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
     animation: slideUp 0.6s ease-out 0.4s both;
 }
 
@@ -580,14 +580,14 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero-content { text-align: center; }
     .hero-badge { margin-left: auto; margin-right: auto; }
     .hero-cta { justify-content: center; }
-    .hero-trust { justify-content: center; }
+    .hero-trust { justify-items: center; }
 }
 
 @media (max-width: 480px) {
     .hero h1 { font-size: 1.8rem; }
     .hero-image { max-width: 320px; }
     .hero-cta { flex-direction: column; align-items: center; }
-    .hero-trust { gap: 16px; }
+    .hero-trust { grid-template-columns: 1fr; gap: 12px; }
 }
 
 /* =============================================
@@ -2326,7 +2326,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero { padding: 100px 0 60px; }
     .hero h1 { font-size: 1.75rem; }
     .hero-cta { flex-direction: column; }
-    .hero-trust { flex-direction: column; gap: 16px; }
+    .hero-trust { grid-template-columns: 1fr; gap: 12px; }
 
     .benefits-grid { grid-template-columns: 1fr; }
     .warranty-grid { grid-template-columns: 1fr; }
