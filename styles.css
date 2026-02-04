@@ -1206,6 +1206,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    margin-bottom: 48px;
 }
 
 .benefit-card {
