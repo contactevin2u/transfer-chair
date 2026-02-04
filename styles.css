@@ -558,7 +558,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .hero-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -576,7 +576,7 @@ h4 { font-size: 1rem; font-weight: 600; }
         gap: 40px;
     }
     .hero-visual { order: -1; }
-    .hero-image { max-width: 320px; }
+    .hero-image { max-width: 400px; }
     .hero-content { text-align: center; }
     .hero-badge { margin-left: auto; margin-right: auto; }
     .hero-cta { justify-content: center; }
@@ -585,7 +585,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 @media (max-width: 480px) {
     .hero h1 { font-size: 1.8rem; }
-    .hero-image { max-width: 320px; }
+    .hero-image { max-width: 400px; }
     .hero-cta { flex-direction: column; align-items: center; }
     .hero-trust { grid-template-columns: 1fr; gap: 12px; }
 }
