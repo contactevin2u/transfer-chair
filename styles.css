@@ -1186,21 +1186,21 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .guide-list li {
-    padding: 10px 0;
-    padding-left: 28px;
+    padding: 4px 0;
+    padding-left: 20px;
     position: relative;
     font-size: 14px;
     color: var(--text);
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .guide-list li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 14px;
-    width: 8px;
-    height: 8px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
     background: var(--primary-500);
     border-radius: 50%;
 }
