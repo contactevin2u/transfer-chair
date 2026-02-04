@@ -166,7 +166,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 /* Purple to Teal Gradient Text - for highlighted words (matching reference) */
 .text-accent {
-    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    background: linear-gradient(90deg, #7c3aed, #14b8a6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -174,7 +174,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 /* Purple Gradient Text */
 .text-gradient {
-    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    background: linear-gradient(135deg, #7c3aed, #14b8a6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
