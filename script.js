@@ -80,40 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createParallaxOrbs();
 
     // =============================================
-    // Section Orbs Animation (Mouse-based)
-    // =============================================
-    const animateSectionOrbs = () => {
-        const sectionOrbs = document.querySelectorAll('.section-orb');
-        if (!sectionOrbs.length || prefersReducedMotion || window.innerWidth < 768) return;
-
-        let mouseX = 0, mouseY = 0;
-        let currentX = 0, currentY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-            mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-        });
-
-        const animate = () => {
-            currentX += (mouseX - currentX) * 0.05;
-            currentY += (mouseY - currentY) * 0.05;
-
-            sectionOrbs.forEach((orb, index) => {
-                const speed = (index + 1) * 40;
-                const x = currentX * speed;
-                const y = currentY * speed;
-                orb.style.transform = `translate(${x}px, ${y}px)`;
-            });
-
-            requestAnimationFrame(animate);
-        };
-
-        animate();
-    };
-
-    animateSectionOrbs();
-
-    // =============================================
     // Header Scroll Effect - Glass Morphism
     // =============================================
     const handleHeaderScroll = () => {

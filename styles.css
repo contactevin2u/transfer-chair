@@ -604,7 +604,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .section-with-orbs {
-    overflow: visible;
+    overflow: hidden;
 }
 
 .section-orb {
@@ -614,7 +614,6 @@ h4 { font-size: 1rem; font-weight: 600; }
     filter: blur(80px);
     opacity: 0.5;
     z-index: 0;
-    transition: transform 0.3s ease-out;
 }
 
 .section-orb-1 {
