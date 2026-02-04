@@ -430,7 +430,7 @@ h4 { font-size: 1rem; font-weight: 600; }
    ============================================= */
 
 .hero {
-    padding: 130px 0 90px;
+    padding: 100px 0 60px;
     background: linear-gradient(135deg, #1e1033 0%, #2d1f4e 50%, #1a1a2e 100%);
     position: relative;
     overflow: hidden;
@@ -440,7 +440,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -558,7 +558,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .hero-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -576,7 +576,7 @@ h4 { font-size: 1rem; font-weight: 600; }
         gap: 40px;
     }
     .hero-visual { order: -1; }
-    .hero-image { max-width: 400px; }
+    .hero-image { max-width: 320px; }
     .hero-content { text-align: center; }
     .hero-badge { margin-left: auto; margin-right: auto; }
     .hero-cta { justify-content: center; }
