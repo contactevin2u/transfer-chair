@@ -80,6 +80,35 @@ document.addEventListener('DOMContentLoaded', () => {
     createParallaxOrbs();
 
     // =============================================
+    // Section Orbs Animation (Scroll-based)
+    // =============================================
+    const animateSectionOrbs = () => {
+        const sectionOrbs = document.querySelectorAll('.section-orb');
+        if (!sectionOrbs.length || prefersReducedMotion) return;
+
+        let ticking = false;
+
+        const updateOrbs = () => {
+            const scrollY = window.scrollY;
+            sectionOrbs.forEach((orb, index) => {
+                const speed = (index + 1) * 0.15;
+                const yOffset = scrollY * speed;
+                orb.style.transform = `translateY(${yOffset}px)`;
+            });
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateOrbs);
+                ticking = true;
+            }
+        }, { passive: true });
+    };
+
+    animateSectionOrbs();
+
+    // =============================================
     // Header Scroll Effect - Glass Morphism
     // =============================================
     const handleHeaderScroll = () => {
