@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentY += (mouseY - currentY) * 0.05;
 
             sectionOrbs.forEach((orb, index) => {
-                const speed = (index + 1) * 20;
+                const speed = (index + 1) * 40;
                 const x = currentX * speed;
                 const y = currentY * speed;
                 orb.style.transform = `translate(${x}px, ${y}px)`;
