@@ -80,30 +80,35 @@ document.addEventListener('DOMContentLoaded', () => {
     createParallaxOrbs();
 
     // =============================================
-    // Section Orbs Animation (Scroll-based)
+    // Section Orbs Animation (Mouse-based)
     // =============================================
     const animateSectionOrbs = () => {
         const sectionOrbs = document.querySelectorAll('.section-orb');
-        if (!sectionOrbs.length || prefersReducedMotion) return;
+        if (!sectionOrbs.length || prefersReducedMotion || window.innerWidth < 768) return;
 
-        let ticking = false;
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
 
-        const updateOrbs = () => {
-            const scrollY = window.scrollY;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+        });
+
+        const animate = () => {
+            currentX += (mouseX - currentX) * 0.05;
+            currentY += (mouseY - currentY) * 0.05;
+
             sectionOrbs.forEach((orb, index) => {
-                const speed = (index + 1) * 0.15;
-                const yOffset = scrollY * speed;
-                orb.style.transform = `translateY(${yOffset}px)`;
+                const speed = (index + 1) * 20;
+                const x = currentX * speed;
+                const y = currentY * speed;
+                orb.style.transform = `translate(${x}px, ${y}px)`;
             });
-            ticking = false;
+
+            requestAnimationFrame(animate);
         };
 
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateOrbs);
-                ticking = true;
-            }
-        }, { passive: true });
+        animate();
     };
 
     animateSectionOrbs();
