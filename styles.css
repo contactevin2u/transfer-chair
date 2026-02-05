@@ -1637,6 +1637,13 @@ h4 { font-size: 1rem; font-weight: 600; }
     transition: all var(--transition);
 }
 
+.state-tag.state-main {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    font-weight: 600;
+}
+
 .state-tag:hover {
     border-color: var(--primary-300);
     background: var(--primary-50);
