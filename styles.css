@@ -1620,18 +1620,44 @@ h4 { font-size: 1rem; font-weight: 600; }
     margin-bottom: 14px;
 }
 
-.location-pills {
+.state-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.state-box {
+    padding: 12px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    transition: all var(--transition);
+}
+
+.state-box:hover {
+    border-color: var(--primary-300);
+    box-shadow: var(--shadow-sm);
+}
+
+.state-box h5 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.city-pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 4px;
 }
 
 .pill {
-    padding: 4px 10px;
-    background: var(--white);
+    padding: 3px 8px;
+    background: var(--gray-50);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-full);
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
     color: var(--gray-600);
     transition: all var(--transition);
@@ -1644,17 +1670,12 @@ h4 { font-size: 1rem; font-weight: 600; }
     color: var(--primary-700);
 }
 
-.pill-state {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
-    font-weight: 600;
+@media (max-width: 992px) {
+    .state-boxes { grid-template-columns: repeat(3, 1fr); }
 }
 
-.pill-state:hover {
-    background: var(--primary-600);
-    border-color: var(--primary-600);
-    color: var(--white);
+@media (max-width: 768px) {
+    .state-boxes { grid-template-columns: repeat(2, 1fr); }
 }
 
 .coverage-visual {
