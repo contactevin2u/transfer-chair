@@ -1620,51 +1620,41 @@ h4 { font-size: 1rem; font-weight: 600; }
     margin-bottom: 14px;
 }
 
-.location-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+.location-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
-.location-card {
-    padding: 12px 14px;
+.pill {
+    padding: 4px 10px;
     background: var(--white);
     border: 1px solid var(--gray-200);
-    border-radius: var(--radius-md);
-    transition: all var(--transition);
-}
-
-.location-card:hover {
-    border-color: var(--primary-300);
-    box-shadow: var(--shadow-sm);
-}
-
-.location-card strong {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 4px;
-}
-
-.location-card span {
+    border-radius: var(--radius-full);
     font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.4;
+    font-weight: 500;
+    color: var(--gray-600);
+    transition: all var(--transition);
+    cursor: pointer;
 }
 
-@media (max-width: 992px) {
-    .location-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 768px) {
-    .location-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-.state-tag:hover {
+.pill:hover {
     border-color: var(--primary-300);
     background: var(--primary-50);
     color: var(--primary-700);
+}
+
+.pill-state {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.pill-state:hover {
+    background: var(--primary-600);
+    border-color: var(--primary-600);
+    color: var(--white);
 }
 
 .coverage-visual {
