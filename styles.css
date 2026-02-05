@@ -1148,8 +1148,14 @@ h4 { font-size: 1rem; font-weight: 600; }
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    margin: 48px 0 32px;
+    margin: 48px 0 12px;
     color: var(--gray-900);
+}
+
+.guide-section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 32px;
 }
 
 .guide-image {
