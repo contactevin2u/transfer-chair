@@ -1165,13 +1165,14 @@ h4 { font-size: 1rem; font-weight: 600; }
 .guide-image::after {
     content: '';
     position: absolute;
-    right: -10px;
-    bottom: 40px;
-    width: 60px;
-    height: 100px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 90px;
     background: var(--primary);
-    border-radius: 16px;
-    z-index: 0;
+    border-radius: 14px;
+    z-index: 2;
 }
 
 .guide-row-reverse .guide-image {
@@ -1180,7 +1181,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .guide-row-reverse .guide-image::after {
     right: auto;
-    left: -10px;
+    left: 15px;
 }
 
 .guide-image img {
