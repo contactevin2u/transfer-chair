@@ -1620,41 +1620,45 @@ h4 { font-size: 1rem; font-weight: 600; }
     margin-bottom: 14px;
 }
 
-.states-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.states-grouped {
-    display: flex;
-    flex-direction: column;
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
 }
 
-.state-group {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-}
-
-.state-tag {
-    padding: 6px 14px;
+.location-card {
+    padding: 12px 14px;
     background: var(--white);
     border: 1px solid var(--gray-200);
-    border-radius: var(--radius-full);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--gray-700);
+    border-radius: var(--radius-md);
     transition: all var(--transition);
 }
 
-.state-tag.state-main {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
+.location-card:hover {
+    border-color: var(--primary-300);
+    box-shadow: var(--shadow-sm);
+}
+
+.location-card strong {
+    display: block;
+    font-size: 13px;
     font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.location-card span {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+    .location-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .location-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 .state-tag:hover {
