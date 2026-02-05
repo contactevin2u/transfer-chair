@@ -1548,10 +1548,7 @@ h4 { font-size: 1rem; font-weight: 600; }
    ============================================= */
 
 .coverage-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
+    display: block;
 }
 
 .coverage-content h2 { margin-bottom: 16px; }
@@ -1623,27 +1620,36 @@ h4 { font-size: 1rem; font-weight: 600; }
     margin-bottom: 14px;
 }
 
-.states-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.states-with-cities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
-.state-tag {
-    padding: 6px 14px;
+.state-group {
+    padding: 16px;
     background: var(--white);
     border: 1px solid var(--gray-200);
-    border-radius: var(--radius-full);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--gray-700);
+    border-radius: var(--radius-md);
     transition: all var(--transition);
 }
 
-.state-tag:hover {
+.state-group:hover {
     border-color: var(--primary-300);
-    background: var(--primary-50);
-    color: var(--primary-700);
+    box-shadow: var(--shadow-sm);
+}
+
+.state-group h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.state-group p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
 }
 
 .coverage-visual {
@@ -2506,6 +2512,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     .coverage-grid { grid-template-columns: 1fr; }
     .coverage-visual { order: -1; }
     .coverage-list { grid-template-columns: 1fr; }
+    .states-with-cities { grid-template-columns: repeat(2, 1fr); }
 
     .why-grid { grid-template-columns: repeat(2, 1fr); }
     .faq-grid { grid-template-columns: 1fr; }
