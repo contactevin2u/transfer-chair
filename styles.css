@@ -1159,29 +1159,10 @@ h4 { font-size: 1rem; font-weight: 600; }
     padding: 32px;
     background: var(--gray-50);
     border-radius: 20px 0 0 20px;
-    position: relative;
-}
-
-.guide-image::after {
-    content: '';
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 90px;
-    background: var(--primary);
-    border-radius: 14px;
-    z-index: 2;
 }
 
 .guide-row-reverse .guide-image {
     border-radius: 0 20px 20px 0;
-}
-
-.guide-row-reverse .guide-image::after {
-    right: auto;
-    left: 15px;
 }
 
 .guide-image img {
@@ -1191,8 +1172,6 @@ h4 { font-size: 1rem; font-weight: 600; }
     border-radius: 16px;
     object-fit: cover;
     transition: transform var(--transition);
-    position: relative;
-    z-index: 1;
 }
 
 .guide-row:hover .guide-image img {
@@ -1298,9 +1277,6 @@ h4 { font-size: 1rem; font-weight: 600; }
     .guide-image {
         padding: 20px;
         border-radius: 20px 20px 0 0;
-    }
-    .guide-image::after {
-        display: none;
     }
     .guide-row-reverse .guide-image {
         border-radius: 20px 20px 0 0;
