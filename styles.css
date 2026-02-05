@@ -1563,16 +1563,18 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .coverage-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
 
 .coverage-item {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 18px 22px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 24px 18px;
     background: var(--white);
     border: 1px solid var(--gray-100);
     border-radius: var(--radius-lg);
@@ -2503,6 +2505,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
     .coverage-grid { grid-template-columns: 1fr; }
     .coverage-visual { order: -1; }
+    .coverage-list { grid-template-columns: 1fr; }
 
     .why-grid { grid-template-columns: repeat(2, 1fr); }
     .faq-grid { grid-template-columns: 1fr; }
