@@ -1938,13 +1938,17 @@ h4 { font-size: 1rem; font-weight: 600; }
     transform: scale(1.1) rotate(-5deg);
 }
 
-.why-card h3 {
+.why-content {
+    flex: 1;
+}
+
+.why-content h3 {
     font-size: 1.05rem;
     margin-bottom: 8px;
     color: var(--gray-900);
 }
 
-.why-card p {
+.why-content p {
     font-size: 14px;
     color: var(--text-muted);
     line-height: 1.6;
