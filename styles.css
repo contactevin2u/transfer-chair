@@ -1597,7 +1597,12 @@ h4 { font-size: 1rem; font-weight: 600; }
     border-radius: 12px;
     border-color: transparent;
 }
-.coverage-item.coverage-item-dark h4 { color: #fff; }
+.coverage-item.coverage-item-dark h4 {
+    background: linear-gradient(90deg, #c4b5fd, #6ee7b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .coverage-item.coverage-item-dark p { color: rgba(255,255,255,0.9); }
 .coverage-item.coverage-item-dark .coverage-item-icon {
     color: #fff;
