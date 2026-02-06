@@ -46,7 +46,7 @@
     --text: var(--gray-600);
     --text-muted: var(--gray-500);
     --text-heading: var(--gray-900);
-    --bg: var(--white);
+    --bg: var(--primary-50);
     --bg-alt: var(--gray-50);
     --border: var(--gray-200);
 
@@ -1599,7 +1599,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     transform: scale(1.1);
 }
 
-.coverage-item-icon svg { width: 22px; height: 22px; }
+.coverage-item-icon svg { width: 22px; height: 22px; stroke: url(#icon-gradient); }
 
 .coverage-item h4 {
     margin-bottom: 4px;
@@ -1928,7 +1928,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .why-icon svg {
     width: 28px;
     height: 28px;
-    stroke: var(--primary-600);
+    stroke: url(#icon-gradient);
 }
 
 .why-card:hover .why-icon {
@@ -2300,6 +2300,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 .institutional-card:hover .institutional-icon {
     transform: scale(1.1) rotate(-5deg);
 }
+
+.institutional-icon svg { width: 28px; height: 28px; stroke: url(#icon-gradient); }
 
 .institutional-card h3 {
     font-size: 1.05rem;
