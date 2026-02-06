@@ -588,7 +588,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero h1 { font-size: 1.8rem; }
     .hero-image { max-width: 320px; }
     .hero-cta { flex-direction: column; align-items: center; }
-    .hero-trust { grid-template-columns: 1fr; gap: 8px; }
+    .hero-trust { grid-template-columns: 1fr 1fr; gap: 8px; }
 }
 
 /* =============================================
@@ -2609,12 +2609,12 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero-grid { gap: 24px; }
     .hero-text { margin-bottom: 20px; }
     .hero-cta { flex-direction: column; margin-bottom: 24px; }
-    .hero-trust { grid-template-columns: 1fr; gap: 10px; }
+    .hero-trust { grid-template-columns: 1fr 1fr; gap: 10px; }
     .hero-badge { padding: 8px 16px; font-size: 13px; margin-bottom: 16px; }
 
     .section-header { margin-bottom: 20px; }
 
-    .benefits-grid { grid-template-columns: 1fr; gap: 10px; margin-bottom: 32px; }
+    .benefits-grid { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
     .benefit-card { padding: 20px 16px; }
     .benefit-icon { width: 52px; height: 52px; margin-bottom: 12px; }
 
