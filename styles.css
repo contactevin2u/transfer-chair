@@ -2699,7 +2699,8 @@ h4 { font-size: 1rem; font-weight: 600; }
         -webkit-overflow-scrolling: touch;
     }
     .review-card {
-        min-width: 85vw;
+        min-width: 70vw;
+        max-width: 70vw;
         flex-shrink: 0;
         scroll-snap-align: start;
         padding: 16px;
