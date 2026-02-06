@@ -1590,6 +1590,21 @@ h4 { font-size: 1rem; font-weight: 600; }
     box-shadow: var(--shadow-md);
 }
 
+.coverage-item-dark {
+    background: linear-gradient(135deg, #4A154B 0%, #2D0A2E 100%);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-color: transparent;
+}
+.coverage-item-dark h4 { color: #fff; }
+.coverage-item-dark p { color: rgba(255,255,255,0.9); }
+.coverage-item-dark .coverage-item-icon {
+    color: #fff;
+    background: rgba(255,255,255,0.15);
+}
+.coverage-item-dark .coverage-item-icon svg { stroke: #fff; }
+
 .coverage-item-icon {
     width: 48px;
     height: 48px;
@@ -2607,6 +2622,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
     .comparison-grid { grid-template-columns: 1fr; gap: 16px; }
     .comparison-card { padding: 24px 20px; }
+    .comparison-icon { width: 52px; height: 52px; }
 
     .steps-grid { grid-template-columns: 1fr; gap: 12px; }
     .step-number { width: 56px; height: 56px; font-size: 1.25rem; margin-bottom: 12px; }
@@ -2718,8 +2734,9 @@ h4 { font-size: 1rem; font-weight: 600; }
     }
 
     /* Coverage purple cards - reduce padding */
-    .coverage-item {
-        padding: 1rem !important;
+    .coverage-item,
+    .coverage-item-dark {
+        padding: 1rem;
     }
 
     /* Guide image - tighter on mobile */
@@ -2826,6 +2843,9 @@ h4 { font-size: 1rem; font-weight: 600; }
     .product-image { height: 140px; margin-bottom: 12px; }
     .institutional-card { padding: 16px 14px; }
     .warranty-card { padding: 16px 14px; }
+    .step-number { width: 48px; height: 48px; font-size: 1.1rem; margin-bottom: 10px; }
+    .comparison-icon { width: 48px; height: 48px; }
+    .comparison-card { padding: 20px 16px; }
 
     /* Coverage */
     .coverage-content h2 { margin-bottom: 12px; }
