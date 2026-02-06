@@ -1590,20 +1590,20 @@ h4 { font-size: 1rem; font-weight: 600; }
     box-shadow: var(--shadow-md);
 }
 
-.coverage-item-dark {
+.coverage-item.coverage-item-dark {
     background: linear-gradient(135deg, #4A154B 0%, #2D0A2E 100%);
     color: #fff;
     padding: 1.5rem;
     border-radius: 12px;
     border-color: transparent;
 }
-.coverage-item-dark h4 { color: #fff; }
-.coverage-item-dark p { color: rgba(255,255,255,0.9); }
-.coverage-item-dark .coverage-item-icon {
+.coverage-item.coverage-item-dark h4 { color: #fff; }
+.coverage-item.coverage-item-dark p { color: rgba(255,255,255,0.9); }
+.coverage-item.coverage-item-dark .coverage-item-icon {
     color: #fff;
     background: rgba(255,255,255,0.15);
 }
-.coverage-item-dark .coverage-item-icon svg { stroke: #fff; }
+.coverage-item.coverage-item-dark .coverage-item-icon svg { stroke: #fff; }
 
 .coverage-item-icon {
     width: 48px;
@@ -2735,7 +2735,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
     /* Coverage purple cards - reduce padding */
     .coverage-item,
-    .coverage-item-dark {
+    .coverage-item.coverage-item-dark {
         padding: 1rem;
     }
 
