@@ -58,7 +58,7 @@
     --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.15);
 
     /* Spacing */
-    --section-gap: 36px;
+    --section-gap: 48px;
 
     /* Typography */
     --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -660,7 +660,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .section-header {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto 28px;
+    margin: 0 auto 40px;
 }
 
 .section-header h2 { margin-bottom: 12px; }
@@ -720,8 +720,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 24px;
+    margin-bottom: 48px;
 }
 
 .product-card {
@@ -1304,8 +1304,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 24px;
+    margin-bottom: 48px;
 }
 
 .benefit-card {
@@ -1492,7 +1492,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 24px;
 }
 
 .step-card {
@@ -1903,7 +1903,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
-    gap: 16px;
+    gap: 24px;
 }
 
 .why-card {
@@ -2285,7 +2285,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .institutional-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 24px;
 }
 
 .institutional-card {
@@ -2581,12 +2581,15 @@ h4 { font-size: 1rem; font-weight: 600; }
     .hero-cta { flex-direction: column; }
     .hero-trust { grid-template-columns: 1fr; gap: 12px; }
 
-    .benefits-grid { grid-template-columns: 1fr; }
-    .warranty-grid { grid-template-columns: 1fr; }
-    .institutional-grid { grid-template-columns: 1fr; }
-    .comparison-grid { grid-template-columns: 1fr; }
-    .steps-grid { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
+    .section-header { margin-bottom: 24px; }
+
+    .benefits-grid { grid-template-columns: 1fr; gap: 12px; }
+    .warranty-grid { grid-template-columns: 1fr; gap: 12px; }
+    .institutional-grid { grid-template-columns: 1fr; gap: 12px; }
+    .comparison-grid { grid-template-columns: 1fr; gap: 12px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 12px; }
+    .why-grid { grid-template-columns: 1fr; gap: 12px; }
+    .products-grid { gap: 16px; }
 
     .cta-buttons { flex-direction: column; }
     .cta-info { flex-direction: column; gap: 24px; }
