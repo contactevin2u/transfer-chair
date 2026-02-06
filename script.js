@@ -156,6 +156,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =============================================
+    // States Toggle - Show/Hide locations
+    // =============================================
+    const statesToggle = document.getElementById('statesToggle');
+    const stateBoxes = document.querySelector('.state-boxes');
+    if (statesToggle && stateBoxes) {
+        statesToggle.addEventListener('click', () => {
+            const isExpanded = stateBoxes.classList.toggle('expanded');
+            statesToggle.textContent = isExpanded ? 'Tutup Lokasi' : 'Lihat Semua Lokasi';
+        });
+    }
+
+    // =============================================
     // FAQ Accordion (Single Open)
     // =============================================
     document.querySelectorAll('.faq-item').forEach(item => {

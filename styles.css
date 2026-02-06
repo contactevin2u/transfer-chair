@@ -1654,6 +1654,34 @@ h4 { font-size: 1rem; font-weight: 600; }
     gap: 12px;
 }
 
+/* Hide state boxes beyond 8th (4x2 grid) */
+.state-boxes:not(.expanded) .state-box:nth-child(n+9) {
+    display: none;
+}
+
+.states-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.states-toggle-btn {
+    background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: var(--radius-full);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.states-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 .state-box {
     padding: 12px;
     background: var(--white);
