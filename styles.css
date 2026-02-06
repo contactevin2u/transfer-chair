@@ -1909,6 +1909,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     display: flex;
     align-items: flex-start;
     gap: 16px;
+    min-height: 100px;
 }
 
 .why-card:hover {
