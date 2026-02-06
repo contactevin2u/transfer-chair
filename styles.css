@@ -58,7 +58,7 @@
     --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.15);
 
     /* Spacing */
-    --section-gap: 48px;
+    --section-gap: 36px;
 
     /* Typography */
     --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -660,7 +660,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .section-header {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 0 auto 28px;
 }
 
 .section-header h2 { margin-bottom: 12px; }
@@ -720,8 +720,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-bottom: 48px;
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
 .product-card {
@@ -1304,8 +1304,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-bottom: 48px;
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
 .benefit-card {
@@ -1492,7 +1492,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 16px;
 }
 
 .step-card {
@@ -1903,7 +1903,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
-    gap: 24px;
+    gap: 16px;
 }
 
 .why-card {
@@ -2285,7 +2285,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .institutional-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 16px;
 }
 
 .institutional-card {
@@ -2571,7 +2571,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 @media (max-width: 768px) {
-    :root { --section-gap: 40px; }
+    :root { --section-gap: 28px; }
 
     .nav-menu, .lang-toggle { display: none; }
     .nav-toggle { display: flex; }
