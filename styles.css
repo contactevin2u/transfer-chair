@@ -2615,8 +2615,11 @@ h4 { font-size: 1rem; font-weight: 600; }
     .section-header { margin-bottom: 20px; }
 
     .benefits-grid { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
-    .benefit-card { padding: 20px 16px; }
-    .benefit-icon { width: 52px; height: 52px; margin-bottom: 12px; }
+    .benefit-card { padding: 14px 12px; }
+    .benefit-icon { width: 40px; height: 40px; margin-bottom: 8px; }
+    .benefit-icon svg { width: 20px; height: 20px; }
+    .benefit-card h3 { font-size: 0.85rem; margin-bottom: 4px; background: linear-gradient(90deg, #c4b5fd, #6ee7b7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .benefit-card p { font-size: 12px; line-height: 1.4; }
 
     .warranty-grid { grid-template-columns: 1fr; gap: 10px; }
     .warranty-card { padding: 20px 16px; }
@@ -2842,8 +2845,11 @@ h4 { font-size: 1rem; font-weight: 600; }
     .section-header { margin-bottom: 16px; }
 
     /* Tighter cards */
-    .benefit-card { padding: 16px 14px; }
-    .benefit-icon { width: 44px; height: 44px; margin-bottom: 10px; }
+    .benefit-card { padding: 12px 10px; }
+    .benefit-icon { width: 36px; height: 36px; margin-bottom: 6px; }
+    .benefit-icon svg { width: 18px; height: 18px; }
+    .benefit-card h3 { font-size: 0.8rem; margin-bottom: 3px; background: linear-gradient(90deg, #c4b5fd, #6ee7b7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .benefit-card p { font-size: 11px; line-height: 1.35; }
     .product-card { padding: 14px; }
     .product-image { height: 140px; margin-bottom: 12px; }
     .institutional-card { padding: 16px 14px; }
