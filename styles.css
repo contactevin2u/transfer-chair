@@ -2640,6 +2640,11 @@ h4 { font-size: 1rem; font-weight: 600; }
     .step-number { width: 56px; height: 56px; font-size: 1.25rem; margin-bottom: 12px; }
 
     .why-grid { grid-template-columns: 1fr; gap: 10px; }
+    .why-card { padding: 14px; gap: 12px; }
+    .why-icon { width: 40px; height: 40px; min-width: 40px; }
+    .why-icon svg { width: 20px; height: 20px; }
+    .why-card h3 { font-size: 0.85rem; margin-bottom: 4px; }
+    .why-card p { font-size: 12px; line-height: 1.45; }
     .products-grid { gap: 16px; }
     .product-card { padding: 16px; }
     .product-image { height: 160px; margin-bottom: 16px; }
@@ -2718,21 +2723,6 @@ h4 { font-size: 1rem; font-weight: 600; }
 
     .nav-menu a:hover {
         background: var(--primary-50);
-    }
-
-    /* Why cards - adjust for mobile */
-    .why-card {
-        padding: 16px;
-        gap: 12px;
-    }
-    .why-icon {
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-    }
-    .why-icon svg {
-        width: 24px;
-        height: 24px;
     }
 
     /* CTA buttons - full width on mobile */
@@ -2825,14 +2815,19 @@ h4 { font-size: 1rem; font-weight: 600; }
 
     .container { padding: 0 14px; }
 
-    /* Why cards - stack icon on top */
+    /* Why cards - keep icon left text right */
     .why-card {
-        flex-direction: column;
-        text-align: center;
+        padding: 12px;
+        gap: 10px;
     }
     .why-icon {
-        margin: 0 auto;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
     }
+    .why-icon svg { width: 18px; height: 18px; }
+    .why-card h3 { font-size: 0.8rem; margin-bottom: 3px; }
+    .why-card p { font-size: 11px; line-height: 1.4; }
 
     /* State boxes - 1 column */
     .state-boxes {
