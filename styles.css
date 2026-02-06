@@ -1905,6 +1905,9 @@ h4 { font-size: 1rem; font-weight: 600; }
     border: 1px solid var(--primary-200);
     border-radius: var(--radius-lg);
     padding: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .why-card:hover {
@@ -1915,13 +1918,13 @@ h4 { font-size: 1rem; font-weight: 600; }
 .why-icon {
     width: 56px;
     height: 56px;
+    min-width: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--primary-100), var(--accent-100));
     color: var(--primary);
     border-radius: var(--radius-lg);
-    margin-bottom: 20px;
     transition: all var(--transition);
 }
 
