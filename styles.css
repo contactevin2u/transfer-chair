@@ -1896,6 +1896,8 @@ h4 { font-size: 1rem; font-weight: 600; }
         flex-direction: column;
         gap: 16px;
     }
+
+    .reviews-score { font-size: 2.25rem; }
 }
 
 /* =============================================
@@ -2660,9 +2662,10 @@ h4 { font-size: 1rem; font-weight: 600; }
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        padding: 100px 24px 24px;
+        padding: 80px 24px 24px;
         flex-direction: column;
         gap: 8px;
+        overflow-y: auto;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);
@@ -2826,6 +2829,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
     /* Coverage */
     .coverage-content h2 { margin-bottom: 12px; }
+    .coverage-list { grid-template-columns: 1fr; }
     .states-section { margin-top: 16px; }
 
     /* FAQ */

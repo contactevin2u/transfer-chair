@@ -126,27 +126,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Navigation - Enhanced
     // =============================================
     if (navToggle && navMenu) {
+        const closeMenu = () => {
+            navMenu.classList.remove('open');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        };
+
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
+            const isOpen = navMenu.classList.toggle('open');
             navToggle.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('open');
-                navToggle.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMenu();
             }
         });
 
         // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navMenu.classList.contains('open')) {
-                navMenu.classList.remove('open');
-                navToggle.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMenu();
             }
         });
     }
@@ -331,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Button Ripple Effect
     // =============================================
     const initRippleEffect = () => {
-        if (prefersReducedMotion) return;
+        if (prefersReducedMotion || 'ontouchstart' in window) return;
 
         document.querySelectorAll('.btn').forEach(button => {
             button.addEventListener('click', function(e) {
