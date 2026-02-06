@@ -1901,8 +1901,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .why-card {
-    background: linear-gradient(135deg, var(--primary-50) 0%, var(--accent-100) 100%);
-    border: 1px solid var(--primary-200);
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--primary-600);
     border-radius: var(--radius-lg);
     padding: 20px;
     display: flex;
