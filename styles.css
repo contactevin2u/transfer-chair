@@ -2686,6 +2686,9 @@ h4 { font-size: 1rem; font-weight: 600; }
     .coverage-content > p { margin-bottom: 20px; }
     .coverage-list { gap: 12px; }
     .states-section { margin-top: 20px; }
+    .state-boxes:not(.expanded) .state-box:nth-child(n+5) { display: none; }
+    .state-boxes { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .states-toggle-btn { font-size: 13px; padding: 8px 24px; }
 
     .reviews-grid { gap: 12px; }
     .review-card { padding: 18px; }
@@ -2857,10 +2860,13 @@ h4 { font-size: 1rem; font-weight: 600; }
     .why-card h3 { font-size: 0.85rem; margin-bottom: 3px; }
     .why-card p { font-size: 12px; line-height: 1.45; }
 
-    /* State boxes - 1 column */
+    /* State boxes - 2 columns, show 4 */
     .state-boxes {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
+    .state-boxes:not(.expanded) .state-box:nth-child(n+5) { display: none; }
+    .states-toggle-btn { font-size: 12px; padding: 8px 20px; }
 
     /* Smaller hero */
     .hero { padding: 84px 0 24px; }
