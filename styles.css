@@ -2690,8 +2690,20 @@ h4 { font-size: 1rem; font-weight: 600; }
     .state-boxes { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .states-toggle-btn { font-size: 13px; padding: 8px 24px; }
 
-    .reviews-grid { gap: 12px; }
-    .review-card { padding: 18px; }
+    .reviews-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .review-card {
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        padding: 18px;
+    }
 
     .faq-item summary { padding: 16px; }
     .faq-item p { padding: 0 16px 16px; }
