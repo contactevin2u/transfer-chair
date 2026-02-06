@@ -2318,7 +2318,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 .institutional-card h3 {
     font-size: 1.05rem;
     margin-bottom: 8px;
-    color: var(--gray-900);
+    background: linear-gradient(90deg, var(--primary-600), var(--accent-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .institutional-card p {
