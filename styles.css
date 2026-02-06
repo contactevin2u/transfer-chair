@@ -2704,6 +2704,12 @@ h4 { font-size: 1rem; font-weight: 600; }
         scroll-snap-align: start;
         padding: 16px;
     }
+    .review-avatar { width: 34px; height: 34px; font-size: 13px; }
+    .review-meta strong { font-size: 12.5px; }
+    .review-meta span { font-size: 11px; }
+    .review-stars svg { width: 14px; height: 14px; }
+    .review-stars { margin-bottom: 8px; }
+    .review-text { font-size: 12.5px; line-height: 1.5; }
 
     .faq-item summary { padding: 16px; }
     .faq-item p { padding: 0 16px 16px; }
