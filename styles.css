@@ -2644,4 +2644,57 @@ h4 { font-size: 1rem; font-weight: 600; }
     .nav-menu a:hover {
         background: var(--primary-50);
     }
+
+    /* Why cards - adjust for mobile */
+    .why-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    .why-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+    .why-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* CTA buttons - full width on mobile */
+    .steps-cta .btn,
+    .hero-cta .btn,
+    .cta-buttons .btn {
+        min-width: 100% !important;
+        width: 100%;
+    }
+
+    /* Coverage purple cards - reduce padding */
+    .coverage-item {
+        padding: 1rem !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    /* Why cards - stack icon on top */
+    .why-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .why-icon {
+        margin: 0 auto;
+    }
+
+    /* State boxes - 1 column */
+    .state-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    /* Smaller hero text */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
 }
