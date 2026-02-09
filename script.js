@@ -428,3 +428,89 @@ function throttle(func, limit) {
         }
     };
 }
+
+// =============================================
+// Blog: Category Filter
+// =============================================
+document.addEventListener('DOMContentLoaded', () => {
+    const catPills = document.querySelectorAll('.blog-cat-pill');
+    const blogCards = document.querySelectorAll('.blog-card[data-category]');
+
+    if (catPills.length && blogCards.length) {
+        catPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                catPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const cat = pill.dataset.cat;
+                blogCards.forEach(card => {
+                    if (cat === 'semua' || card.dataset.category === cat) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // =============================================
+    // Article: TOC Scroll Highlight
+    // =============================================
+    const tocLinks = document.querySelectorAll('.article-toc a');
+    if (tocLinks.length && 'IntersectionObserver' in window) {
+        const headings = [];
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('href')?.replace('#', '');
+            if (id) {
+                const el = document.getElementById(id);
+                if (el) headings.push({ el, link });
+            }
+        });
+
+        if (headings.length) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        tocLinks.forEach(l => l.classList.remove('active'));
+                        const match = headings.find(h => h.el === entry.target);
+                        if (match) match.link.classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+            headings.forEach(h => observer.observe(h.el));
+        }
+    }
+
+    // =============================================
+    // Back to Top Button
+    // =============================================
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // =============================================
+    // Copy Link Button
+    // =============================================
+    const copyBtn = document.querySelector('.btn-copy-link');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const original = copyBtn.textContent;
+                copyBtn.textContent = 'Disalin!';
+                setTimeout(() => { copyBtn.textContent = original; }, 2000);
+            });
+        });
+    }
+});
