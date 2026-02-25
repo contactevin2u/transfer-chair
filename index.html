@@ -1236,6 +1236,71 @@
             </div>
         </section>
 
+        <!-- Rangkaian Produk Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">RANGKAIAN PRODUK KAMI</span>
+                    <h2>Satu Pasukan, Semua <span class="text-accent">Keperluan Perubatan</span> Anda</h2>
+                    <p>Kami bukan sekadar jual transfer chair. Pasukan kami menyediakan pelbagai produk perubatan untuk penjagaan menyeluruh di rumah.</p>
+                </div>
+
+                <div class="rangkaian-wrapper">
+                    <button class="rangkaian-arrow rangkaian-arrow-left" aria-label="Scroll left">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="rangkaian-scroll">
+                        <a href="https://renthospitalbed.my" class="rangkaian-card" target="_blank" rel="noopener">
+                            <div class="rangkaian-img">
+                                <div class="rangkaian-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M2 12h20M2 12v4a1 1 0 001 1h1m16 0h1a1 1 0 001-1v-4M6 17a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zM2 12V8a1 1 0 011-1h13l3 5"/></svg>
+                                </div>
+                            </div>
+                            <span class="rangkaian-name">Katil Hospital</span>
+                        </a>
+                        <a href="/" class="rangkaian-card rangkaian-card-active">
+                            <div class="rangkaian-img">
+                                <img src="images/Sample Transfer Chair.webp" alt="Transfer Chair" loading="lazy">
+                            </div>
+                            <span class="rangkaian-name">Transfer Chair</span>
+                        </a>
+                        <a href="https://travelwheelchair.my" class="rangkaian-card" target="_blank" rel="noopener">
+                            <div class="rangkaian-img">
+                                <div class="rangkaian-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="14" r="4"/><line x1="12" y1="10" x2="12" y2="6"/></svg>
+                                </div>
+                            </div>
+                            <span class="rangkaian-name">Wheelchair</span>
+                        </a>
+                        <a href="https://sewamesinoksigen.my" class="rangkaian-card" target="_blank" rel="noopener">
+                            <div class="rangkaian-img">
+                                <div class="rangkaian-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><rect x="6" y="4" width="12" height="16" rx="2"/><circle cx="12" cy="14" r="3"/><line x1="12" y1="4" x2="12" y2="8"/></svg>
+                                </div>
+                            </div>
+                            <span class="rangkaian-name">Mesin Oksigen</span>
+                        </a>
+                        <a href="#" class="rangkaian-card rangkaian-card-soon">
+                            <div class="rangkaian-img">
+                                <div class="rangkaian-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>Akan datang</span>
+                                </div>
+                            </div>
+                            <span class="rangkaian-name">CPAP</span>
+                        </a>
+                    </div>
+                    <button class="rangkaian-arrow rangkaian-arrow-right" aria-label="Scroll right">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+
+                <div class="rangkaian-banner">
+                    <p><strong>Satu pasukan, satu misi</strong> — semua keperluan perubatan di rumah, <a href="https://wa.me/60112879609?text=Hi%2C%20saya%20nak%20tanya%20pasal%20produk%20perubatan%20lain." target="_blank">kami ada</a>.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section id="hubungi" class="section section-blue">
             <div class="container">
@@ -1362,5 +1427,15 @@
     </a>
 
     <script src="script.js" defer></script>
+    <script>
+    (function(){
+        const scroll = document.querySelector('.rangkaian-scroll');
+        const left = document.querySelector('.rangkaian-arrow-left');
+        const right = document.querySelector('.rangkaian-arrow-right');
+        if(!scroll||!left||!right) return;
+        left.addEventListener('click', () => scroll.scrollBy({left:-220,behavior:'smooth'}));
+        right.addEventListener('click', () => scroll.scrollBy({left:220,behavior:'smooth'}));
+    })();
+    </script>
 </body>
 </html>
