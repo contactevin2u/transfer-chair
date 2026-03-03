@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             progressBar.style.width = `${progress}%`;
         };
 
-        window.addEventListener('scroll', updateProgress, { passive: true });
+        window.addEventListener('scroll', throttle(updateProgress, 100), { passive: true });
         updateProgress();
     };
 
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    window.addEventListener('scroll', throttle(handleHeaderScroll, 100), { passive: true });
     handleHeaderScroll();
 
     // =============================================
@@ -277,19 +277,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const animateCounter = (element, target, suffix = '') => {
             const duration = 2000;
-            const steps = 60;
-            const stepDuration = duration / steps;
-            let current = 0;
-            const increment = target / steps;
+            let start = null;
 
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
+            const step = (timestamp) => {
+                if (!start) start = timestamp;
+                const progress = Math.min((timestamp - start) / duration, 1);
+                element.textContent = Math.floor(progress * target) + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
                 }
-                element.textContent = Math.floor(current) + suffix;
-            }, stepDuration);
+            };
+
+            requestAnimationFrame(step);
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -374,24 +373,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Add ripple animation to document if not exists
-        if (!document.querySelector('#ripple-styles')) {
-            const style = document.createElement('style');
-            style.id = 'ripple-styles';
-            style.textContent = `
-                @keyframes ripple {
-                    to {
-                        width: 300px;
-                        height: 300px;
-                        opacity: 0;
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-        }
+        // @keyframes ripple is defined in styles.css
     };
 
     initRippleEffect();
+
+    // =============================================
+    // Rangkaian Scroll Arrows
+    // =============================================
+    const rangkaianScroll = document.querySelector('.rangkaian-scroll');
+    const rangkaianLeft = document.querySelector('.rangkaian-arrow-left');
+    const rangkaianRight = document.querySelector('.rangkaian-arrow-right');
+    if (rangkaianScroll && rangkaianLeft && rangkaianRight) {
+        rangkaianLeft.addEventListener('click', () => rangkaianScroll.scrollBy({ left: -220, behavior: 'smooth' }));
+        rangkaianRight.addEventListener('click', () => rangkaianScroll.scrollBy({ left: 220, behavior: 'smooth' }));
+    }
 
     // =============================================
     // Smooth hover effects for hero cards
@@ -487,13 +483,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // =============================================
     const backToTop = document.querySelector('.back-to-top');
     if (backToTop) {
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', throttle(() => {
             if (window.scrollY > 400) {
                 backToTop.classList.add('visible');
             } else {
                 backToTop.classList.remove('visible');
             }
-        }, { passive: true });
+        }, 100), { passive: true });
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
