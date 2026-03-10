@@ -4,6 +4,20 @@
  * Purple-Emerald theme with warm neutrals
  */
 
+// =============================================
+// Performance: Throttle scroll events
+// =============================================
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -12,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+
+    // Cache scrollHeight to avoid repeated layout queries
+    let cachedDocHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const updateCachedDocHeight = throttle(() => {
+        cachedDocHeight = document.documentElement.scrollHeight - window.innerHeight;
+    }, 500);
+    window.addEventListener('resize', updateCachedDocHeight, { passive: true });
 
     // =============================================
     // Create Scroll Progress Bar
@@ -25,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const updateProgress = () => {
             const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (scrollTop / docHeight) * 100;
+            const progress = (scrollTop / cachedDocHeight) * 100;
             progressBar.style.width = `${progress}%`;
         };
 
@@ -409,20 +429,6 @@ document.addEventListener('DOMContentLoaded', () => {
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.style.setProperty('--transition', '0.01ms');
     document.documentElement.style.setProperty('--transition-slow', '0.01ms');
-}
-
-// =============================================
-// Performance: Throttle scroll events
-// =============================================
-function throttle(func, limit) {
-    let inThrottle;
-    return function(...args) {
-        if (!inThrottle) {
-            func.apply(this, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
 }
 
 // =============================================
