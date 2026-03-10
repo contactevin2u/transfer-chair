@@ -48,13 +48,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preload" as="image" href="images/Transfer%20Chair%20Main%20Image.webp" fetchpriority="high">
 
-    <!-- Schema.org - LocalBusiness -->
+    <!-- Schema.org - MedicalBusiness -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "MedicalBusiness",
         "name": "Transfer Chair - AA Alive Sdn. Bhd.",
         "description": "Beli transfer chair (kerusi pindah) elektrik dan manual di Malaysia. Harga berpatutan, ansuran tanpa deposit, penghantaran pantas ke seluruh Malaysia.",
+        "url": "https://transferchair.my/",
+        "image": "https://transferchair.my/images/Transfer%20Chair%20Main%20Image.webp",
+        "medicalSpecialty": "https://schema.org/PhysicalMedicine",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "1, Jalan Perusahaan 4, Kawasan Industri Batu Caves",
@@ -136,6 +139,38 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Ada! Untuk pembelian 3 unit ke atas, kami tawarkan harga khas. Sesuai untuk hospital, klinik, dan pusat jagaan. WhatsApp kami untuk sebut harga."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jenis transfer chair apa yang ada?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kami ada pelbagai jenis — transfer chair elektrik (motor automatik), transfer hoist hydraulik (sistem pam tangan), heavy duty (tahan beban 150kg), dan deluxe aluminium (paling ringan, muat lalu pintu bilik air)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Boleh ambil sendiri ke?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Boleh! Kalau nak jimat kos penghantaran, datang je ke warehouse dan showroom kami di Batu Caves, Selangor. WhatsApp dulu untuk arrange masa pickup."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Transfer chair boleh tahan berapa berat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bergantung pada model — model standard tahan 110-130kg, manakala model Heavy Duty tahan sehingga 150kg."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Waktu operasi bila?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Isnin sampai Jumaat: 9 pagi - 6 petang. Sabtu & Ahad: 9 pagi - 4 petang. WhatsApp boleh buat inquiry 24/7."
                 }
             }
         ]
@@ -221,6 +256,95 @@
                 "item": "https://transferchair.my/"
             }
         ]
+    }
+    </script>
+
+    <!-- Schema.org - HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Cara Beli Transfer Chair di Malaysia",
+        "description": "4 langkah mudah untuk membeli transfer chair dari AA Alive Sdn. Bhd. — dari WhatsApp hingga penghantaran ke pintu rumah.",
+        "totalTime": "PT24H",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "WhatsApp Kami",
+                "text": "Tekan butang WhatsApp, bagitahu kami apa yang anda perlukan dan lokasi penghantaran."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Pilih Model & Cara Bayar",
+                "text": "Kami akan cadangkan model terbaik dan cara bayaran — cash atau ansuran 12-24 bulan."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Kami Hantar",
+                "text": "Penghantaran 4-24 jam untuk Selangor & KL. Nak ambil sendiri di Batu Caves pun boleh."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Terus Boleh Guna",
+                "text": "Kami setup dan tunjuk cara guna. Ada soalan? Kami sentiasa ready tolong."
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org - Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Transfer Chair Sales & Delivery",
+        "provider": {
+            "@type": "MedicalBusiness",
+            "name": "AA Alive Sdn. Bhd.",
+            "url": "https://transferchair.my/"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Malaysia"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Transfer Chair",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Transfer Wheelchair (Manual)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Transfer Wheelchair (Hydraulic)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Transfer Hoist (Hydraulic)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Transfer Hoist (Electric)"
+                    }
+                }
+            ]
+        }
     }
     </script>
 </head>
