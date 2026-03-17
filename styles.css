@@ -3450,6 +3450,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .rangkaian-scroll {
     display: flex;
+    justify-content: center;
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
