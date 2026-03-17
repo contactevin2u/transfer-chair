@@ -3481,9 +3481,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .rangkaian-card {
-    flex: 1 1 0;
+    flex: 0 0 auto;
     min-width: 200px;
-    max-width: 260px;
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
