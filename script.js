@@ -5,6 +5,43 @@
  */
 
 // =============================================
+// Google Ads conversion tracking
+// Fires alongside default link behavior (preserves target="_blank").
+// gtag uses sendBeacon transport so events aren't dropped on nav.
+// =============================================
+(function () {
+    const WA_SEND_TO = 'AW-795120559/KTefCPqF1KEcEK-nkvsC';
+    const TEL_SEND_TO = 'AW-795120559/Dc20CNbEwKEcEK-nkvsC';
+
+    const bind = () => {
+        document.querySelectorAll('a[href*="wa.me/"]').forEach(a => {
+            if (a.dataset.convBound) return;
+            a.dataset.convBound = '1';
+            a.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', { send_to: WA_SEND_TO });
+                }
+            });
+        });
+        document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+            if (a.dataset.convBound) return;
+            a.dataset.convBound = '1';
+            a.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', { send_to: TEL_SEND_TO });
+                }
+            });
+        });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bind);
+    } else {
+        bind();
+    }
+})();
+
+// =============================================
 // Performance: Throttle scroll events
 // =============================================
 function throttle(func, limit) {
