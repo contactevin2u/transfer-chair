@@ -520,5 +520,22 @@
     </a>
 
     <script src="script.js" defer></script>
+<!-- gclid-tracker -->
+<script>
+(function(){
+  try{var g=new URLSearchParams(location.search).get("gclid");if(g){localStorage.setItem("gclid",g);localStorage.setItem("gclid_landing",location.pathname);}}catch(e){}
+  function R(){var c="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",r="";for(var i=0;i<6;i++)r+=c.charAt(Math.floor(Math.random()*c.length));return r;}
+  document.addEventListener("click",function(e){
+    var a=e.target.closest&&e.target.closest("a[href*='wa.me']");if(!a)return;
+    var g;try{g=localStorage.getItem("gclid");}catch(_){}if(!g)return;
+    if(a.getAttribute("data-ref"))return;
+    var ref=R();
+    try{fetch("https://chatbaby-api.onrender.com/api/v1/tracking/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({ref:ref,gclid:g,page:location.pathname,landing:localStorage.getItem("gclid_landing")||location.pathname,timestamp:Date.now()}),mode:"cors",keepalive:true}).catch(function(){});}catch(_){}
+    var u=a.href;a.href=u+(u.indexOf("?text=")>-1?"%20%5BREF:"+ref+"%5D":(u.indexOf("?")>-1?"&text=%5BREF:"+ref+"%5D":"?text=%5BREF:"+ref+"%5D"));
+    a.setAttribute("data-ref","1");
+  },true);
+})();
+</script>
+
 </body>
 </html>
