@@ -1,0 +1,4 @@
+# Local build/generator tooling. Not served or needed at runtime: the Vercel project
+# has no build step (static files served as-is), and no page references these files.
+/add-hreflang.mjs
+/normalize-local-urls.mjs
